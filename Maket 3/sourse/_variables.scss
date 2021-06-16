@@ -1,0 +1,39 @@
+$cream: #F9F6F1;
+$accent: #D7B399;
+$dark: #212121;
+$black: #000000;
+$grey: #CBCFD4;
+$lightGrey:#F4F4F4;
+$darkGrey: #8d8d8d;
+$white: #ffffff;
+$redImp: #D84033;
+
+
+
+@mixin breakpoint($point) {
+    @if $point == xl {
+        @media (max-width: 1200px){
+            @content;
+        }
+    }
+    @if $point == lg {
+        @media (max-width: 992px){
+            @content;
+        }
+    }
+    @else if $point == md {
+        @media (max-width: 768px){
+            @content;
+        }
+    }
+    @else if $point == sm {
+        @media (max-width: 576px){
+            @content;
+        }
+    }
+    @else if $point == xs {
+        @media (max-width: 320px){
+            @content;
+        }
+    }
+}

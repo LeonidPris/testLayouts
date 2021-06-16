@@ -1,0 +1,449 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+main {
+    max-width: 1283px;
+    margin: 0 auto;
+    padding: 29px 18px 0;
+}
+
+
+.header {
+    background-color: #f6f2f2;
+padding-top: 29px;
+}
+nav {
+    max-width: 1283px;
+    margin: 0 auto;
+    background-color: #313030;
+    height: 90px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 0;
+}
+.nav > li {
+    list-style-type: none;
+    padding: 40px 23px 32px;
+    margin-left: 9px;
+    margin-right: 9px;
+    text-transform: uppercase;
+}
+.nav > li > a {
+    color: #e0e0e0 ;
+    font-size: 14px;
+    font-weight: 700;
+}
+.nav > li:hover {
+    background-color: #ff3f40;
+}
+
+
+.banner {
+    padding-top: 103px;
+    padding-bottom: 111px;
+    max-width: 1283px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.banner > div {
+    max-width: 609px;
+}
+.banner > video {
+    box-shadow: 0px 14px 73px 0px rgba(0, 0, 0, 0.29);
+    height: 357px;
+    width: 633px;
+}
+ h1 {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 72px;
+    margin: 0;
+    margin-top: 6px;
+ }
+h1 + p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+    margin-top: 37px;
+}
+.btn-Contact {
+    border: none;
+    border-radius: 5px;
+    background-color: #ff2d2d;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 21px 63px;
+    margin-top: 58px;
+}
+ .provide {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 100px 17px 109px;
+    border-bottom: solid #ececec 2px;
+ }
+
+ .elOne {
+    grid-row-start: 1;
+    grid-row-end: 3;
+ }
+ .el {
+    padding: 74px 17px 50px;
+    position: relative;
+ }
+ .elTwo::before {
+    content:'';
+    display: block;
+    position: absolute;
+    background-image: url(../images/provideImg2.svg);
+    width: 41px;
+    height: 41px;
+    top: 0;
+    background-size: contain;
+}
+ .elThree::before {
+    content:'';
+    display: block;
+    position: absolute;
+    background-image: url(../images/provideImg3.svg);
+    width: 40px;
+    height: 38px;
+    top: 0;
+    background-size: contain;
+ }
+ .elFour::before {
+    content:'';
+    display: block;
+    position: absolute;
+    background-image: url(../images/provideImg4.svg);
+    width: 40px;
+    height: 33px;
+    top: 0;
+    background-size: contain;
+ }
+ .elFive::before {
+    content:'';
+    display: block;
+    position: absolute;
+    background-image: url(../images/provideImg5.svg);
+    width: 44px;
+    height: 33px;
+    top: 0;
+    background-size: contain;
+ }
+
+ .provide h3 {
+    color: #737373;
+    font-size: 24px;
+    font-weight: 600;
+     }
+ .provide h3+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+ }
+ .provide > div > h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 55px;
+    color: #585858;
+    text-transform: uppercase;
+ }
+ .provide > div > h2 + p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #424242;
+ } 
+ .btn-LM {
+    border: solid #ff2d2d 2px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color:  #ff2d2d;
+    background-color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 21px 63px;
+    margin-top: 58px;
+ }
+.prod{
+    margin-top: 100px;
+}
+ .prod > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 700;
+    color: #585858;
+    margin-bottom: 36px;
+ }
+ .prod > p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #a0a0a0;
+    padding: 0px 370px;
+    margin-bottom: 30px;
+ }
+.redline {
+    background-color: #ff2d2d;
+    margin: 0 auto;
+    height: 2px;
+    width: 130px;
+    margin-bottom: 89px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+}
+.menu li {
+    list-style-type: none;
+    padding: 0 25px;
+    margin-bottom: 66px;
+}
+.menu li a {
+    text-transform: uppercase;
+    color: #737373;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.menu li a:hover {
+    color: #ff2d2d;
+}
+.prod-img-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 25px;
+}
+.prod-img-item {
+    width: 300px;
+    height: 292px;
+}
+.prod-img-item img {
+    width: 300px;
+    height: 300px;
+}
+
+.meeting h2 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #585858;
+}
+.meeting>p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #7f7f7f;
+}
+.redline2 {
+    background-color: #ff2d2d;
+    padding: 0 18 0 0;
+    height: 2px;
+    width: 130px;
+}
+.team {
+    display: grid;
+}
+.team-desc h3 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #585858;
+}
+.team-desc p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #c5c5c5;
+}
+.social-netw  ul {
+    display: flex;
+    list-style-type: none;
+    max-width: 375px;
+    justify-content: space-between;
+}
+.social-netw  a {
+    color: #585858;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.face0 {
+    width: 322px;
+    height: 460px;
+}
+
+.face {
+    width: 197px;
+    height: 215px;
+    background-size: contain;
+}
+
+
+.contact {
+    margin-top: 50px; /*!!!!!!!!!!!НЕ НУЖНЫЙ ОТСТУП!!!!!!!!!!*/
+    background-image: url(..//images/BGcontact.png);
+    background-size: cover;
+    padding-bottom: 140px;
+}
+.contact h2 {
+    text-align: center;
+    padding-top: 150px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.contact p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #fff;
+}
+.sbscrb {
+    margin: 0 246px; /*КОСТЫЛЬ. ХЗ*/
+}
+.emale-adress {
+    width: 520px;
+    height: 80px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 30px;
+}
+.emale-submit {
+    background-color: #ff2d2d;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 34px;
+    padding: 23px 58px;
+    margin-left: 22px;
+}
+
+.feedback {
+    margin-bottom: 110px;
+}
+.feedback-head {
+    max-width: 784px;
+    margin-top: 106px;
+}
+.feedback-head h2 {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #585858;
+}
+.feedback-head  p {
+    margin: 55px 0;
+    font-size: 16px;
+    line-height: 28px;
+    color: #737373;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 108px;
+}
+
+.userdata {
+    width: 309px;
+    height: 70px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e5e5e5;
+    color: #676767;
+    padding-left: 55px;
+}
+.username {
+    margin-right: 54px;
+}
+.usertext {
+    width: 677px;
+    height: 250px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e5e5e5;
+    color: #676767;
+    resize: none;
+    padding: 35px 55px;
+    margin: 46px 0;
+}
+input, textarea {
+    outline: none;
+} 
+
+.send-message {
+    width: 784px;
+    height: 72px;
+    background-color: #ff3b3b;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 34px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-info {
+    background-color: #2d2d2d;
+    padding: 145px 0 145px 80px;
+}
+
+.contact-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #c9c9c9;
+    text-transform: uppercase;
+    margin-bottom: 43px;
+}
+.contact-info p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #c9c9c9;
+    margin-bottom: 28px;
+}
+
+.netwic {
+    background-image: url(..//images/иконки-социальных-сетей-png-скачать-.png);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+}
+
+.facebook {
+    background-position: 20 40;
+}
+footer {
+    background-color: #2d2d2d;
+    text-align: center;
+    color: #c9c9c9;
+    padding: 40px;
+}
+footer p {
+    display: inline-block;
+}

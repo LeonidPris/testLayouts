@@ -1,0 +1,357 @@
+/*  font-family: 'Montserrat', sans-serif;  */
+/*  font-family: 'Roboto', sans-serif;  */
+
+body {
+    background-color: #eaeaea;
+    font-family: 'Montserrat', sans-serif;
+}
+.wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.center {
+    text-align: center;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 36px;
+    padding-bottom: 40px;
+}
+.navg {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    padding: 3px 36px 13px 0px; /*  padding-left: 0;  */
+    font-weight: 700;
+    margin-bottom: 0;    /* почему "марджин:0" работает не как "мнТоп:0,мнЛефт:0б мнБоттом:0,мнРайт:0" ?! */
+}
+.navg>li{ /* почему бы не добавить грануцу слева и отключить ее у 1st child? */
+    padding-left: 24px;
+    margin-left: 23px;
+    position: relative;
+}
+.navg>li:first-child::before{
+    display: none;
+}
+.navg>li::before{ /* создание полосок через позиционирование. КАК РАБОТАЕТ? */
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #494949;
+    position: absolute;
+    left: 0;
+}
+.navg>li>a {
+    text-decoration: none;
+    color: #494949;
+}
+
+
+.banner {  /* повтори весь BG */
+    background-image: url(../images/bgBanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 204px;
+    padding-bottom: 285px;
+}
+.pizza {
+    position: absolute;
+    right: 17px;
+    top: -199px;
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 12px;
+    color: #ffffff;
+} 
+.description {
+    font-size: 25px;
+    line-height: 30px;
+    max-width: 571px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+}
+.btn {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    padding: 12px 0px 12px 0px;
+    max-width: 186px;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.h3 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #282828;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    /*padding-left: 127px;
+    padding-right: 127px;*/ /*2й способ установить закорючки. h3::before  и ::after должны = НУЛЮ*/
+    margin-bottom: 11px;
+    letter-spacing: -0.5px;
+}
+.h3::before, .h3::after { /*глянь видосы по псевдоэлементам*/
+    content: '';
+    position: absolute;
+    background-image: url(..//images/item.png);
+    display: block;/*чтоб отобразить эл-т*/
+    width: 102px;
+    height: 28px;
+    top: calc(50% - 14px); /*пробел нужен для математики*/
+}
+.h3::before{
+    left: -127px;
+}
+.h3::after{
+    right: -127px;
+}
+.h3 + p { /*соседний селектор. здесь выбран "р"*/
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #959595;
+    margin: 0px;
+    letter-spacing: 0.6px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*работает как текстДекор:none, но для списков*/
+    padding-left: 0;
+    margin-top: 40px;
+    margin-bottom: 62px;
+}
+.menu li {
+    padding-left: 19px;
+    padding-right: 17px;
+    position: relative;
+    letter-spacing: 1px;
+}
+.menu li::before{ /* создание полосок через позиционирование. КАК РАБОТАЕТ? */
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: #494848;
+    position: absolute;
+    left: 0;
+}
+.menu li:first-child::before{
+    display: none;
+}
+.menu li a{
+    font-size: 18px;
+    font-weight: 700;
+    color: #494848;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 19px;
+}
+.menu li a:hover { /* вместо :hover было .active*/
+    border-bottom: 4px solid #ee252d;
+    position: relative;
+}
+.menu li a:hover::before { /* Как работает создание 3угольников???*/
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 7px solid #ee252d;
+}
+.box {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.11);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 112px;
+}
+.number {
+    color: #282828;
+    font-family: 'Roboto', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    position: relative;
+    margin-bottom: -42px;
+    margin-top: 1px;
+}
+.number::after{
+    content: '';
+    display: block;/*чтою отобразить картинки items 01-03*/
+    position: absolute;
+}
+.number-one::after{
+    background-image: url(../images/icon01.png);
+    width: 126px;
+    height: 71px;
+    left: 65px;
+    top: calc(50% - 35px);
+}
+.number-two::after{
+    background-image: url(../images/icon02.png);
+    width: 184px;
+    height: 81px;
+    left: 86px;
+    top: calc(50% - 40px);
+}
+.number-three::after{
+    background-image: url(../images/icon03.png);
+    width: 142px;
+    height: 68px;
+    left: 96px;
+    top: calc(50% - 34px);
+}
+.box-item { /*????????????????????????????????????????????*/
+    padding: 58px 26px 27px 41px;
+    box-sizing: content-box;
+}
+.box-text {
+    border-right: 2px solid #eaeaea;
+    padding-right: 60px;
+}
+.box-item:last-child .box-text {
+    border-right: none;
+}
+.box-text  h4 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #282828;
+    margin-bottom: 24px;
+}
+.box-text  p {
+    FONT-WEIGHT: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #282828;
+    line-height: 24px;/*ищи в текстовом слое PS*/
+    margin-top: -13px;
+}
+.btn-start {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    background-image: url(../images/bgBtn.png);
+    background-position: center center;
+    text-decoration: none;
+    padding: 29px 54px;
+    background-repeat: no-repeat;
+}
+.page{
+    padding-top: 68px;
+    padding-bottom: 107px;
+}
+footer {
+    background-image: url(../images/bgFooter.png);
+    padding: 26px 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+}
+@media(max-width: 1200px) {
+    .wrapper{
+        max-width: 800px;
+    }
+    .pizza {
+        display: none;
+    }
+    .banner {
+        padding-top: 114px;
+        padding-bottom: 175px;
+    }
+    .h3 {
+        font-size: 40px;
+    }
+    .h3+p{
+        font-size: 17px;
+    }
+    .menu {
+        margin-top: 32px;
+        margin-bottom: 47px;
+    }
+    .menu li a {
+        font-size: 16px
+    }
+    .box {
+        flex-direction: column;
+    }
+    .box-item {
+        padding: 30px 60px 0px 60px;
+    }
+    .box-text {
+        border-right: none;
+        border-bottom: 2px solid #eaeaea;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    .box-text:last-child{
+        border-bottom: none;
+    }
+}
+@media(max-width: 850px) {
+    .navigation {
+        flex-direction: column;
+    }
+    .navg{
+        margin-top: 20px;
+    }
+    .h3::after, .h3::before {
+        display: none;
+    }
+    .box-text h4 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .box-text {
+        border-bottom: 2px solid #ebebeb;
+    }
+    .box-text p {
+        font-size: 16px;
+    }
+    .btn-start {
+        font-size: 20px;
+        background-size: contain;
+    }
+    .page {
+        padding-top: 25px;
+        padding-bottom: 75px;
+    }
+    .box {
+        margin-bottom: 75px;
+    }
+    .footer {
+        padding: 20px 0;
+        font-size: 15px;
+    }
+}
+@media(max-width: 700px) {
+
+}

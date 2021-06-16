@@ -1,0 +1,418 @@
+@import'variables';
+
+
+
+$someColor: #441d03; //переменная
+
+
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'Roboto', sans-serif;
+
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page {
+    &-light{
+        background-color: $cream;
+    }
+    &-dark{
+        background-color: $dark;
+    }
+}
+.wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.title-h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    &-product{
+        margin: 150px 0 100px;
+        @include breakpoint (lg){
+            margin: 50px 0 60px;
+        }
+    }
+}
+
+//ШАПКА
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding-top: 46px;
+    margin-bottom: 126px;
+    @include breakpoint (lg){
+        margin-bottom: 30px;
+    }
+}
+.nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    &-item {    // идентично новому селектору ".nav-item" 
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &-link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        text-decoration: none;
+        color: $dark;
+    }
+}
+.cart {
+    background-image: url(..//img/korzina.svg);
+    display: block;
+    padding-left: 45px;
+    padding-right: 0;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    height: 30px;
+    &-count{
+        background-image: url(..//img/Group6.svg);
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        display: block;
+        
+        padding: 10px 20px;
+        font-weight: 700;
+        color: $white;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+}
+
+
+
+//ТИТУЛЬНАЯ РЕКЛАМКА
+
+
+
+
+.btn {
+    background-color: $accent;
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 32px;
+    letter-spacing: 0.4px;
+    &-xs{
+        padding: 6px 29px;
+    }
+    &-center{
+        display: block;
+        text-align: center;
+        max-width: 156px;
+        margin: 0 auto;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 129px;
+    @include breakpoint (lg){
+            margin-top: 0;
+            flex-wrap: wrap;
+            padding-bottom: 70px;
+
+        }
+    &-item{
+        flex:0 0 50%;
+        @include breakpoint (lg){
+            flex:0 0 100%;
+        }
+    }
+    .sale{
+        @include breakpoint (lg){
+            text-align: center;   
+    }
+        &-desc{
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            color: $black;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+        &-title {
+            font-size: 55px;
+            font-weight: 700;
+            color: $black;
+            margin: 7px 2px 59px;
+            letter-spacing: 2px;
+        }
+        // &-btn{
+        // }
+    }
+}
+
+
+.box {
+    position: relative;
+    @include breakpoint (lg){
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    &-price{
+        position: absolute;
+        right: 0;
+        text-align: right;
+    }
+    &-oldPrice {
+        font-size: 24px;
+        font-weight: 700;
+        color: $black;
+        text-decoration: line-through;
+        margin-top: 34px;
+        letter-spacing: 3px;
+    }
+    &-newPrice {
+        font-size: 42px;
+        font-weight: 700;
+        color: $redImp;
+        margin: 0;
+        margin-top: -5px;
+        letter-spacing: 2px;
+    }
+    &-img {
+        margin-top: -6px;
+        width: 100%;
+        min-width: 556px;
+    }
+}
+
+
+// ЧЕРНАЯ РЕКЛАМКА
+
+
+.notice {
+    color: $white;
+    text-align: center;
+    padding: 58px 0 47px;
+    &-title {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        span{
+            font-weight: 400;
+        }
+    }
+    &-subtitle {
+        font-size: 21px;
+        font-weight: 300;
+
+    }
+}
+
+
+// КОЛЛЕКЦИИ
+
+
+.collect {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint (lg){
+        flex-wrap: wrap;   
+    }
+    &-item{
+        max-width: 100%;
+        flex: 0 0 49%;
+        padding-left: 20px;
+        padding: 40px 0px 66px 20px;
+        background-size: 190px 171px;
+        @include breakpoint (xl){
+            flex: 0 0 46%;   
+        }
+        @include breakpoint (lg){
+            flex: 0 0 96%;   
+        }
+    }
+    &-man{
+        background-image: url(..//img/collectMan.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 33px) bottom;
+    }
+    &-woman{
+        background-image: url(..//img/collectWoman.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 51px) bottom;
+    }
+    &-title {
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $black;
+        letter-spacing: 0.8px;
+        span {
+            font-weight: 300;
+        }
+    }
+    &-subtitle {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 35px;
+    }
+}
+
+
+// ИЗДЕЛИЯ НА ПРОДАЖУ
+
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 30px 0 80px;
+    @include breakpoint (lg){
+        flex-wrap: wrap;   
+        margin: 30px 0 40px;
+    }
+    &-item {
+        flex: 0 0 24%;
+        position: relative;
+        min-width: 266px;
+        @include breakpoint (xl){
+            &:last-child{
+                display: none;
+            }
+        }
+        @include breakpoint (lg){
+            flex: 0 0 49%;
+            margin-bottom: 20px;
+            &:last-child{
+                display: block;
+            }   
+        }
+        &::before, &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 26px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include breakpoint (lg){
+                background-size: 100% 26px;
+            }
+
+        }
+        &::before {
+            background-image: url(../img/prodItemTopCorners.svg);
+        }
+        &::after {
+            background-image: url(../img/prodItemBottomCorners.svg);
+        }
+    }
+    &-title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        color: $black;
+    }
+    &-price {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        color: $accent;
+    }
+}
+
+.prod-block {
+    margin-bottom: 152px;
+    @include breakpoint (lg){
+        margin-bottom: 50px;
+    }
+}
+
+
+// footer 
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 72px 0;
+    @include breakpoint (lg){
+        flex-wrap: wrap;
+        padding: 30px 30px 0;
+    }
+    &-logo {
+        flex: 0 0 38%;
+        @include breakpoint (lg){
+            flex: 0 0 100%;
+            margin-bottom: 20px;
+        }
+    }
+    &-nav {
+        flex: 0 0 62%;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        @include breakpoint (lg){
+            flex: 0 0 100%;
+        }
+    }
+    &-list{
+        list-style-type: none;
+        padding-left: 0;
+        margin: 9px 0;
+        &-item{
+            margin-bottom: 16px;
+            padding-right: 15px;   
+        }
+        &-title{
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $white;
+        }
+        &-link{
+            text-decoration: none;
+            color: $grey;
+            font-size: 14px;
+            font-weight: 400;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                background-repeat: no-repeat;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+            }
+        }
+        &-netVk {
+            &::before {                
+                background-image: url(../img/vk.svg);
+                margin: 3px 0 0 -23px;
+            }
+        }
+        &-netFb {
+            &::before {                
+                background-image: url(../img/fb.svg);
+                margin: 1px 0 0 -20px;
+            }
+        }
+        &-netIns {
+            &::before {                
+                background-image: url(../img/ins.svg);
+                margin: 1px 0 0 -20px;
+            }
+        }
+    }
+}
